@@ -19,6 +19,7 @@ class Control(object):
     def __init__(self):
         self.done = False
         self.lastTime = current_milli_time()
+		
     def event_loop(self):
         for event in pg.event.get():
             if event.type == KEYDOWN:
@@ -41,8 +42,8 @@ if __name__ == "__main__":
 
     pg.init()
 
-    run_it = Control()
-    run_it.main_loop()
+    gameLoop = Control()
+    gameLoop.main_loop()
     
     pg.quit()
     sys.exit()
