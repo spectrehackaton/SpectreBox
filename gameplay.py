@@ -15,6 +15,8 @@ SOUND_CMD = "aplay"
 SOUND_PATH = "sound/"
 
 def playSound(path):
+
+    print("playing : "+path)
     #subprocess.call("pwd")
     #print("sound : " + SOUND_CMD + path)
     Popen([SOUND_CMD , SOUND_PATH + path.lower()])
@@ -23,6 +25,7 @@ class SpectreGameplay:
     def __init__(self):
         print("init Game Engine")
         self.spectres = []
+
         self.retrieveSpectre()
         self.timer = 0
         self.challengeCount = 0
@@ -94,11 +97,11 @@ class SpectreSequence(object):
         pass
         
     def update(self, dt):
-        timer += dt
+        self.timer += dt
         
 class SSCasper(SpectreSequence):
     def __init__(self, spectre):
         super(spectre, self).__init__(name)
     def update(self, dt):
-        timer += dt
+        self.timer += dt
 
