@@ -5,7 +5,7 @@ import math
 import pygame as pg
 
 import time
-current_milli_time = lambda: int(round(time.time() * 1000))
+current_milli_time = lambda: ((time.time() * 1000))
 
 
 from gameplay import SpectreGameplay
@@ -21,16 +21,19 @@ class Control(object):
         self.lastTime = current_milli_time()
 		
     def event_loop(self):
-        for event in pg.event.get():
-            if event.type == KEYDOWN:
-                self.done = True
+        for event in pg.event.get(): 
+            if event.type == pg.QUIT: 
+                self.done  = True 
+            elif event.type == pg.KEYDOWN: 
                 print("touch")
+                if event.key == pg.K_ESCAPE: 
+                    self.done = True 
 
     def update(self):
-	    dt = current_milli_time() - self.lastTime
-		self.lastTime = current_milli_time()
+	dt = current_milli_time() - self.lastTime
+        self.lastTime = current_milli_time()
         game.update(dt)
-
+	#print(dt)
 
     def main_loop(self):
         while not self.done:

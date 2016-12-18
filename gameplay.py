@@ -63,9 +63,9 @@ class SpectreGameplay:
         self.currentSeq = None
        
     def update(self, dt):
-        timer += dt
-        if (self.currentSequence is not None):
-            self.currentSequence.update(dt)
+        self.timer += dt
+        if (self.currentSeq is not None):
+            self.currentSeq.update(dt)
 
 class Spectre:
     def __init__(self, name, force, rythm):
