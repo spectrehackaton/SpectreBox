@@ -1,3 +1,4 @@
+
 # SpectreBox
 
 Projet réalisé dans le cadre du Hackaton Drôme 2016
@@ -7,13 +8,14 @@ Projet réalisé dans le cadre du Hackaton Drôme 2016
 
 Avec le [8Fablab](http://www.8fablab.fr/)
 
-Wiki du projet : [8Fablab](http://site-coop.net/8fablabdrome/wakka.php?wiki=DescriptionGF)
+[Wiki du projet](http://site-coop.net/8fablabdrome/wakka.php?wiki=DescriptionGF)
 
 # Dependency
 
 * Python 2.7
 * PyGame
 * python-firebase
+* pySerial
 
 # Platform
 
