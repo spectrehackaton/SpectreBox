@@ -3,6 +3,7 @@ import os
 import sys
 import math
 import pygame as pg
+from pygame.locals import *
 
 import time
 current_milli_time = lambda: ((time.time() * 1000))
@@ -19,21 +20,21 @@ class Control(object):
     def __init__(self):
         self.done = False
         self.lastTime = current_milli_time()
-		
+        
     def event_loop(self):
         for event in pg.event.get(): 
-            if event.type == pg.QUIT: 
-                self.done  = True 
-            elif event.type == pg.KEYDOWN: 
+            if event.type == KEYDOWN: 
                 print("touch")
                 if event.key == pg.K_ESCAPE: 
                     self.done = True 
+            elif event.type == pg.QUIT: 
+                self.done  = True 
 
     def update(self):
-	dt = current_milli_time() - self.lastTime
+        dt = current_milli_time() - self.lastTime
         self.lastTime = current_milli_time()
         game.update(dt)
-	#print(dt)
+        #print(dt)
 
     def main_loop(self):
         while not self.done:
