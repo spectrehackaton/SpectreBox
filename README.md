@@ -3,6 +3,8 @@
 
 Projet réalisé dans le cadre du Hackaton Drôme 2016
 
+Code arduino du projet [SpectreBox](https://github.com/spectrehackaton/SpectreBox-arduino)
+
 48h pour créer un projet autour du thème : objects connectés
 
 
